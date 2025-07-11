@@ -1,69 +1,36 @@
-# Number Guessing Game
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A fun and interactive number guessing game implemented in Python with multiple difficulty levels and score tracking.
+## Getting Started
 
-## Features
+First, run the development server:
 
-- Three difficulty levels:
-  - Easy (1-50, 10 attempts)
-  - Medium (1-100, 8 attempts)
-  - Hard (1-200, 6 attempts)
-- Smart hint system
-- Score calculation based on:
-  - Remaining attempts
-  - Time taken to guess
-- Input validation and error handling
-- Option to play multiple rounds
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## Requirements
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- Python 3.6 or higher
-- No additional packages required
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## How to Run
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-1. Make sure you have Python installed on your system
-2. Navigate to the game directory
-3. Run the game using:
-   ```bash
-   python number-game.py
-   ```
+## Learn More
 
-## How to Play
+To learn more about Next.js, take a look at the following resources:
 
-1. Start the game and select a difficulty level (1-3)
-2. The game will generate a random number within the range for your chosen difficulty
-3. Enter your guess when prompted
-4. You'll receive hints after each incorrect guess:
-   - "Way too high/low" if your guess is off by more than 20
-   - "A bit high/low" if your guess is closer
-5. Try to guess the number within the allowed attempts
-6. Your score is calculated based on:
-   - Number of attempts remaining
-   - Time taken to guess correctly
-7. Choose to play again or exit after each round
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Implementation Details
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-The game is structured into several key functions:
+## Deploy on Vercel
 
-- `get_difficulty_range()`: Handles difficulty selection and returns range parameters
-- `calculate_score()`: Computes score based on attempts left and time taken
-- `give_hint()`: Provides intelligent feedback based on the guess
-- `play_game()`: Main game loop with input handling and game logic
-- `main()`: Controls multiple game rounds and program flow
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-### Scoring System
-
-- Base score: Up to 1000 points based on remaining attempts
-- Time penalty: Up to 200 points deducted based on time taken
-- Higher scores are achieved by:
-  - Using fewer attempts
-  - Guessing quickly
-  - Playing on harder difficulties
-
-## Tips
-
-- Pay attention to the hints - they'll help you narrow down the range
-- Try to guess efficiently to maximize your score
-- On harder difficulties, use a binary search approach for better results 
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
